@@ -1,0 +1,14 @@
+{
+  "name": "influxdata-docs",
+  "owner": {
+    "name": "InfluxData"
+  },
+  "description": "InfluxData agent skills for writing technical documentation.",
+  "plugins": [
+    {
+      "name": "docs-skills",
+      "source": "./",
+      "description": "Documentation writing skills: Google developer documentation style, content-type guidance for docs pages, and meaning-preserving rewrites."
+    }
+  ]
+}

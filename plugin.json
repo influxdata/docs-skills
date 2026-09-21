@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "docs-skills",
+  "version": "0.1.0",
+  "description": "Documentation writing skills: Google developer documentation style, content-type guidance for docs pages, and meaning-preserving rewrites.",
+  "author": {
+    "name": "InfluxData"
+  },
+  "homepage": "https://github.com/influxdata/docs-skills",
+  "repository": "https://github.com/influxdata/docs-skills",
+  "license": "MIT"
+}
