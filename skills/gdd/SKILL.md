@@ -1,12 +1,13 @@
 ---
 name: gdd
-description: Rewrite a file, a selection, or inline text in Google developer documentation style. Edits a named file in place. Use the gdd-style skill instead to load the rules and apply them to everything written from then on.
-argument-hint: "[file, selection, or instructions]"
-disable-model-invocation: true
+description: Rewrite a named file, a selection, or inline text in Google developer documentation style, editing a named file in place. Use only when the user explicitly asks to rewrite or revise something with gdd. To apply the style rules to everything written from then on, use the gdd-style skill instead.
+license: MIT
+metadata:
+  author: influxdata
 ---
 
-Call the Skill tool with "gdd-style",
-then apply those rules to the target named in the arguments.
+Load the gdd-style skill,
+then apply its rules to the target the user names.
 
 Resolve the target first:
 
@@ -17,4 +18,5 @@ Resolve the target first:
 For a file or inline text,
 run the fidelity check in gdd-style's "When you revise existing text" section before you finish.
 For a file longer than about 150 lines,
-dispatch a subagent to run the check with only the original and the revision.
+run the check in a separate agent or subagent, if your environment supports one,
+and give it only the original and the revision.

@@ -1,9 +1,12 @@
 ---
 name: write-docs
 description: Write or revise a documentation page for its content type, such as a tutorial, how-to guide, reference, or explanation. Use when drafting, restructuring, or reviewing a docs page, or when it's unclear whether the reader or the system should be the actor.
+license: MIT
+metadata:
+  author: influxdata
 ---
 
-Call the Skill tool with "gdd-style" first.
+Load the gdd-style skill first.
 Its rules apply to every page.
 This skill adds the rules that depend on the content type.
 

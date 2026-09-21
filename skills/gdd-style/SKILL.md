@@ -1,6 +1,9 @@
 ---
 name: gdd-style
 description: "Google developer documentation style rules for any prose a person reads, in chat replies as much as in files. Use when writing, editing, or reviewing documentation, error messages, code comments, PR descriptions, or commit bodies, or when the user asks for 'gdd' or Google style."
+license: MIT
+metadata:
+  author: influxdata
 ---
 
 # Google developer documentation style
