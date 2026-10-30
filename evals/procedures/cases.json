@@ -1,0 +1,22 @@
+[
+  {
+    "id": "recovery-introduction",
+    "prompt": "Review this procedure using gdd-style and write-docs. Engineering has confirmed the steps and completion signal for this fictional service. Return the revised Markdown and any publication blockers.",
+    "input": "## Conversion failures\n\nA failed conversion leaves the migration paused.\n\n1. Correct the conversion error reported in the ingest log.\n2. Restart each affected ingest node.\n3. Run `migration retry`.\n4. Restart the compactor with `--resume-migration`.\n5. Confirm that migration status is `complete`.\n"
+  },
+  {
+    "id": "final-restart",
+    "prompt": "Review and correct this recovery procedure using gdd-style and write-docs. The following engineering confirmation applies to version 1.2 of this fictional service: after correcting conversion errors and restarting affected ingest nodes, `migration retry` only resets the failed state. The operator must restart the compactor with `--resume-migration` to resume conversion, then confirm migration status is `complete`. Return the revised Markdown and any publication blockers.",
+    "input": "## Resume a failed migration\n\nTo recover after a conversion failure in version 1.2, follow these steps:\n\n1. Correct the conversion error reported in the ingest log.\n2. Restart each affected ingest node.\n3. Run `migration retry`.\n"
+  },
+  {
+    "id": "focused-wrapping",
+    "prompt": "Use gdd-style and write-docs to correct only the timeout default in this reference excerpt. Engineering confirmed that the default is 60 seconds. Return the complete revised Markdown.",
+    "input": "## Request timeout\n\nThe default request timeout is 30 seconds. Set `request_timeout` to override this value.\n\nThe client retries transient failures automatically. Retry attempts use the same request timeout as the initial request, and the retry limit applies independently.\n\n## Connection pool\n\nThe client reuses open connections. Configure the pool size before creating the client, because existing clients retain their original pool configuration.\n"
+  },
+  {
+    "id": "heading-only",
+    "prompt": "Review this complete excerpt using gdd-style and write-docs. The UI steps have been verified. Make only necessary corrections and return the Markdown.",
+    "input": "## Rename a saved dashboard\n\n1. Open the dashboard.\n2. Click **Settings**.\n3. Enter a new name in **Name**.\n4. Click **Save**.\n"
+  }
+]

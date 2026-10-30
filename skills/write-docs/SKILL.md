@@ -38,10 +38,27 @@ When you revise, gdd-style's fidelity check still applies.
 Making the reader the actor of a step the source already describes isn't a new claim.
 Naming a system actor the source doesn't state is.
 
-## 3. Check before you finish
+## 3. Verify procedures through completion
+
+For each procedure, trace the reader's actions from the starting condition to the expected result.
+Check prerequisites, actors, failure handling, required restarts, and observable completion signals.
+A reset or retry command can prepare recovery without completing it.
+Check what must happen afterward.
+
+For consequential operations, such as upgrades or recovery,
+require runtime verification or explicit engineering confirmation for the applicable product and version.
+Record the evidence and any remaining gaps.
+If verification is unavailable, provide the correction or finding in the handoff
+and identify the gap that blocks publication.
+Keep unverified actions and completion signals flagged for confirmation rather than inventing them.
+
+## 4. Check before you finish
 
 The page is done when:
 
 - it has one content type, or you've flagged the mix;
 - every step and every system behavior has an actor, or a flag;
-- the voice matches the row for its content type.
+- the voice matches the row for its content type;
+- lists and procedures satisfy gdd-style's introduction rule;
+- procedures cover the path through completion, with evidence or explicit publication blockers;
+- focused corrections preserve unrelated wrapping and wording.

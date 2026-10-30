@@ -62,6 +62,9 @@ Every rule below serves one of those four readers.
   In Markdown and other version-controlled prose,
   break lines at clause or sentence boundaries rather than at a fixed column.
   Each line is then a unit that a reader or a diff can evaluate on its own.
+  During focused corrections, preserve existing wrapping and unrelated wording.
+  Apply semantic line feeds to new prose or an explicitly requested formatting pass.
+  Keep broad formatting changes separate from substantive corrections.
   Chat responses have no diff, so this rule doesn't apply to them.
 
 ## Structure and formatting
@@ -71,6 +74,15 @@ Every rule below serves one of those four readers.
 - **Code font for anything you'd type or that a machine reads:**
   `filenames`, `flags`, `env_vars`, `function()`, literal values.
   Tag fenced code blocks with a language.
+- **Introduce lists and procedures with their purpose.**
+  Use a complete sentence that connects the list to the preceding text.
+  For a procedure, state what the steps accomplish and when they apply.
+  Describing a failure alone doesn't introduce its recovery steps.
+  Use a colon when the list immediately follows the introduction,
+  or a period when other material separates them.
+  Omit the introduction only when the immediately preceding heading supplies all needed context.
+  For example: "To reset the failed upgrade and resume the migration, follow these steps:"
+  See Google's [procedure introductions](https://developers.google.com/style/procedures#introductory-sentences).
 - **Numbered lists for sequences,** one imperative action per step.
   Bullets for everything else.
 - **Short paragraphs** of three or four sentences.
